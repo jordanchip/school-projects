@@ -3,10 +3,18 @@ package client.communication;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import core.IServer;
+import shared.communication.IServer;
 
 
+
+/**
+ * @author Justin Snyder
+ * A ServerPoller periodically hits the server to get the status of a particular game.
+ */
 public class ServerPoller {
+	/**
+	 * The default polling interval (1 second)
+	 */
 	public final static long DEFAULT_POLL_INTERVAL = 1000;
 	
 	private IServer server;
@@ -21,6 +29,15 @@ public class ServerPoller {
 	public ServerPoller(IServer server) {
 		this.server = server;	
 	}
+	
+	/** Tells you whether this poller is running or not
+	 * @return true if the poller is running
+	 * @pre None
+	 * @post None
+	 */
+	public boolean isRunning() {
+		return poller != null;
+	}
 
 	/**
 	 * Creates a thread for polling at the specified interval and begins polling.
@@ -28,7 +45,7 @@ public class ServerPoller {
 	 * @pre The poller is not running and the interval is positive
 	 * @post The poller will be running
 	 */
-	public void start (long interval) {
+	public void start(long interval) {
 		poller = new Timer(true); // Create a new timer to run as a daemon
 		
 		poller.scheduleAtFixedRate(new TimerTask() {
@@ -47,7 +64,7 @@ public class ServerPoller {
 	 * @pre The poller is not running
 	 * @post The poller will be running
 	 */
-	public void start () {
+	public void start() {
 		start(DEFAULT_POLL_INTERVAL);
 	}
 
@@ -59,7 +76,7 @@ public class ServerPoller {
 	 * @pre the poller is running
 	 * @post the poller will not be running
 	 */
-	public void stop () {
+	public void stop() {
 		poller.cancel();
 		poller = null;
 	}
@@ -67,8 +84,10 @@ public class ServerPoller {
 	/**
 	 * Gets the server object that this ServerPoller uses
 	 * @return the server or server proxy object that this ServerPoller uses
+	 * @pre None
+	 * @post None
 	 */
-	public IServer getServer () {
+	public IServer getServer() {
 		return server;
 		
 	}
