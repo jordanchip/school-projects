@@ -2,7 +2,9 @@ package shared.model;
 
 import java.util.Map;
 
-class ResourceList {
+import shared.definitions.ResourceType;
+
+public class ResourceList {
 	private Map<ResourceType, Integer> resources;
 
 	public ResourceList() {

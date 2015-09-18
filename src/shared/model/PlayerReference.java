@@ -5,7 +5,7 @@ package shared.model;
  *
  */
 public class PlayerReference {
-	private Game game;
+	private CatanModel game;
 	private int playerIndex;
 	
 	public PlayerReference() {

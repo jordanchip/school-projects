@@ -2,6 +2,8 @@ package shared.model;
 
 import java.util.Map;
 
+import shared.definitions.DevCardType;
+
 /**
  * Manages the development cards that a player or the bank has.
  */

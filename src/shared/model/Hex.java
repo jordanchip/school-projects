@@ -1,5 +1,6 @@
 package shared.model;
 
+import shared.definitions.ResourceType;
 import shared.locations.HexLocation;
 
 class Hex {
