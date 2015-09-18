@@ -3,7 +3,7 @@ package shared.model;
 import java.util.List;
 
 class MessageList {
-	public List<MessageLine> lines;
+	private List<MessageLine> lines;
 
 	public MessageList() {
 		

@@ -1,4 +1,4 @@
-package server.communication;
+package client.communication;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ import shared.model.PlayerReference;
 import shared.model.ResourceList;
 import shared.model.ResourceTradeList;
 
-public class Server implements IServer {
+public class MockServer implements IServer {
 
 	@Override
 	public Session login(String username, String password)
@@ -67,14 +67,14 @@ public class Server implements IServer {
 	public void saveGame(int gameID, String filename)
 			throws GamePersistenceException, ServerException {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void loadGame(String filename) throws GamePersistenceException,
 			ServerException {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -107,7 +107,7 @@ public class Server implements IServer {
 	@Override
 	public void addAIPlayer(Session user, AIType type) throws ServerException {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
@@ -196,6 +196,13 @@ public class Server implements IServer {
 	}
 
 	@Override
+	public CatanModel offerTrade(Session user, ResourceTradeList offer)
+			throws ServerException, NotYourTurnException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public CatanModel respondToTrade(Session user, boolean accept)
 			throws ServerException, TradeException {
 		// TODO Auto-generated method stub
@@ -211,6 +218,13 @@ public class Server implements IServer {
 	}
 
 	@Override
+	public CatanModel discardCards(Session user, ResourceList cards)
+			throws ServerException, InvalidActionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
 	public CatanModel finishTurn(Session user) throws ServerException,
 			InvalidActionException {
 		// TODO Auto-generated method stub
@@ -220,21 +234,7 @@ public class Server implements IServer {
 	@Override
 	public void changeLogLevel(LogLevel level) throws ServerException {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public CatanModel offerTrade(Session user, ResourceTradeList offer)
-			throws ServerException, NotYourTurnException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CatanModel discardCards(Session user, ResourceList cards)
-			throws ServerException, InvalidActionException {
-		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 }

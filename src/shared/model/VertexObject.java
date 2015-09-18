@@ -3,7 +3,7 @@ package shared.model;
 import shared.locations.EdgeLocation;
 
 class VertexObject {
-	private int owner;
+	private PlayerReference owner;
 	private EdgeLocation location;
 
 	public VertexObject() {
@@ -13,7 +13,7 @@ class VertexObject {
 	/**
 	 * @return the owner
 	 */
-	public int getOwner() {
+	public PlayerReference getOwner() {
 		return owner;
 	}
 

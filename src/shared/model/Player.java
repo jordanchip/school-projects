@@ -5,12 +5,14 @@ import shared.definitions.CatanColor;
 class Player {
 	
 	private CatanColor color;
-	private boolean discarded;
 	private String name;
+	
 	private DevCardList newDevCards;
 	private DevCardList oldDevCards;
-	private boolean playedDevCard;
 	private ResourceList resources;
+	
+	private boolean playedDevCard;
+	private boolean discarded;
 	
 	private int cities;
 	private int roads;

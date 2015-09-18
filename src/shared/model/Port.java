@@ -13,4 +13,34 @@ class Port {
 		
 	}
 
+	/**
+	 * @return the resource
+	 */
+	public ResourceType getResource() {
+		return resource;
+	}
+
+	/**
+	 * @return the location
+	 */
+	public HexLocation getLocation() {
+		return location;
+	}
+
+	/**
+	 * @return the direction
+	 */
+	public EdgeDirection getDirection() {
+		return direction;
+	}
+
+	/**
+	 * @return the ratio
+	 */
+	public int getRatio() {
+		return ratio;
+	}
+	
+	
+
 }

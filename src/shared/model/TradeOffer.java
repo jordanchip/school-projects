@@ -6,7 +6,7 @@ package shared.model;
 class TradeOffer {
 	private PlayerReference sender;
 	private PlayerReference receiver;
-	private ResourceList offer;
+	private ResourceTradeList offer;
 
 	public TradeOffer() {
 		
@@ -29,7 +29,7 @@ class TradeOffer {
 	/**
 	 * @return the offer
 	 */
-	public ResourceList getOffer() {
+	public ResourceTradeList getOffer() {
 		return offer;
 	}
 	
