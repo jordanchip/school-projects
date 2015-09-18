@@ -20,6 +20,7 @@ public class ClientCommunicator {
 	 * @param o the JSON Object that is going to be sent
 	 * @pre JSON Object is valid, and contains a location to be sent as well as "Get" or "Post"
 	 * @post Response from the server will be given
+	 * @return response object from server
 	 */
 	public JSONObject send(JSONObject o){
 		return null;
