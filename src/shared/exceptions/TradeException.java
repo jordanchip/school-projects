@@ -1,5 +1,5 @@
 package shared.exceptions;
 
-public class TradeException extends InvalidActionException {
+public class TradeException extends InsufficientResourcesException {
 
 }

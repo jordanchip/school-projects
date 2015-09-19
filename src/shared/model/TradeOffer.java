@@ -3,7 +3,7 @@ package shared.model;
 /**
  * Manages the current trade offer between two players
  */
-class TradeOffer {
+public class TradeOffer {
 	private PlayerReference sender;
 	private PlayerReference receiver;
 	private ResourceTradeList offer;

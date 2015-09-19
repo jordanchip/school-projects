@@ -2,7 +2,7 @@ package shared.model;
 
 import shared.locations.EdgeLocation;
 
-class VertexObject {
+public class VertexObject {
 	private PlayerReference owner;
 	private EdgeLocation location;
 

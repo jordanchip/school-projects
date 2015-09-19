@@ -3,8 +3,8 @@ package shared.model;
 import java.util.List;
 
 public class CatanModel {
-	private MessageList chat;
-	private MessageList log;
+	private List<MessageLine> chat;
+	private List<MessageLine> log;
 	private Board map;
 	private TradeOffer tradeOffer;
 	private TurnTracker turnTracker;
@@ -18,6 +18,51 @@ public class CatanModel {
 
 	public CatanModel() {
 		
+	}
+
+	/**
+	 * @param chat
+	 * @param log
+	 * @param map
+	 * @param tradeOffer
+	 * @param turnTracker
+	 * @param bank
+	 * @param players
+	 * @param longestRoad
+	 * @param largestArmy
+	 * @param winner
+	 * @param version
+	 */
+	public CatanModel(List<MessageLine> chat, List<MessageLine> log, Board map,
+			TradeOffer tradeOffer, TurnTracker turnTracker, Bank bank,
+			List<Player> players, PlayerReference longestRoad,
+			PlayerReference largestArmy, PlayerReference winner, int version) {
+		super();
+		this.chat = chat;
+		this.log = log;
+		this.map = map;
+		this.tradeOffer = tradeOffer;
+		this.turnTracker = turnTracker;
+		this.bank = bank;
+		this.players = players;
+		this.longestRoad = longestRoad;
+		this.largestArmy = largestArmy;
+		this.winner = winner;
+		this.version = version;
+	}
+
+	/**
+	 * @return the chat
+	 */
+	public List<MessageLine> getChat() {
+		return chat;
+	}
+
+	/**
+	 * @return the log
+	 */
+	public List<MessageLine> getLog() {
+		return log;
 	}
 
 	/**
@@ -60,20 +105,6 @@ public class CatanModel {
 	 */
 	public void setLargestArmy(PlayerReference largestArmy) {
 		this.largestArmy = largestArmy;
-	}
-
-	/**
-	 * @return the chat
-	 */
-	public MessageList getChat() {
-		return chat;
-	}
-
-	/**
-	 * @return the log
-	 */
-	public MessageList getLog() {
-		return log;
 	}
 
 	/**

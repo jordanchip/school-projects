@@ -3,7 +3,7 @@ package shared.model;
 import shared.definitions.ResourceType;
 import shared.locations.HexLocation;
 
-class Hex {
+public class Hex {
 	private HexLocation location;
 	private ResourceType resource;
 	private int number;

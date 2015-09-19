@@ -9,7 +9,6 @@ public class Session {
 	private int playerID;
 	
 	public Session(String username, String password, int playerID) {
-		super();
 		this.username = username;
 		this.password = password;
 		this.playerID = playerID;

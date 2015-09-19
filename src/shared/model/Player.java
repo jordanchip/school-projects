@@ -2,7 +2,7 @@ package shared.model;
 
 import shared.definitions.CatanColor;
 
-class Player {
+public class Player {
 	
 	private CatanColor color;
 	private String name;

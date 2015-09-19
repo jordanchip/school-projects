@@ -3,7 +3,7 @@ package shared.model;
 import shared.definitions.ResourceType;
 import shared.locations.*;
 
-class Port {
+public class Port {
 	private ResourceType resource;
 	private HexLocation location;
 	private EdgeDirection direction;

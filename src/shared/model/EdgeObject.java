@@ -2,7 +2,7 @@ package shared.model;
 
 import shared.locations.EdgeLocation;
 
-class EdgeObject {
+public class EdgeObject {
 	private PlayerReference owner;
 	private EdgeLocation location;
 
